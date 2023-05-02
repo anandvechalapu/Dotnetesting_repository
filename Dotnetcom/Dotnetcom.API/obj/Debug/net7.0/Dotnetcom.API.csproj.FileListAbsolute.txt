@@ -43,3 +43,6 @@ C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.API\bin\Debug\net7.0\D
 C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.API\bin\Debug\net7.0\Dotnetcom.Service.dll
 C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.API\bin\Debug\net7.0\Dotnetcom.Service.pdb
 C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.API\bin\Debug\net7.0\Dotnetcom.DataAccess.pdb
+C:\Amar\Debug\Apps\1\334\202305024341\Dotnetcom\Dotnetcom.API\obj\Debug\net7.0\Dotnetcom.API.dll
+C:\Amar\Debug\Apps\1\334\202305024341\Dotnetcom\Dotnetcom.API\obj\Debug\net7.0\refint\Dotnetcom.API.dll
+C:\Amar\Debug\Apps\1\334\202305024341\Dotnetcom\Dotnetcom.API\obj\Debug\net7.0\Dotnetcom.API.pdb

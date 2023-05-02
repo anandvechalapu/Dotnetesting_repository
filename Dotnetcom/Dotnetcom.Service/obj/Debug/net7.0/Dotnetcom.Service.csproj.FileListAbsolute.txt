@@ -15,3 +15,6 @@ C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\obj\Debug\net7
 C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\obj\Debug\net7.0\refint\Dotnetcom.Service.dll
 C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\obj\Debug\net7.0\Dotnetcom.Service.pdb
 C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\obj\Debug\net7.0\ref\Dotnetcom.Service.dll
+C:\Amar\Debug\Apps\1\334\202305024341\Dotnetcom\Dotnetcom.Service\obj\Debug\net7.0\Dotnetcom.Service.dll
+C:\Amar\Debug\Apps\1\334\202305024341\Dotnetcom\Dotnetcom.Service\obj\Debug\net7.0\refint\Dotnetcom.Service.dll
+C:\Amar\Debug\Apps\1\334\202305024341\Dotnetcom\Dotnetcom.Service\obj\Debug\net7.0\Dotnetcom.Service.pdb

@@ -3,8 +3,10 @@
     public class JiraToNetModel
     {
         public int Id { get; set; }
-        public string Server { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
+        public string ProjectName { get; set; }
+        public string TicketNumber { get; set; }
+        public string Description { get; set; }
+        public string Priority { get; set; }
+        public string Status { get; set; }
     }
 }

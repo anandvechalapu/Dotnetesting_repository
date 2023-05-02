@@ -1,53 +1,60 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿// Generated C# Respi API Controller
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Dotnetcom.DTO;
 using Dotnetcom.Service;
 
 namespace Dotnetcom.API
 {
     [Route("api/[controller]")]
-    [ApiController]
-    public class JiraToNetController : ControllerBase
+    public class JiraToNetController : Controller
     {
-        private readonly JiraToNetService _jiraToNetService;
+        private readonly JiraToNetService _service;
 
-        public JiraToNetController(JiraToNetService jiraToNetService)
+        public JiraToNetController(JiraToNetService service)
         {
-            _jiraToNetService = jiraToNetService;
+            _service = service;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<JiraToNetModel>> GetJiraToNetModelAsync(int id)
+        [HttpPost]
+        public async Task<ActionResult<JiraToNetModel>> CreateAsync([FromBody]JiraToNetModel model)
         {
-            JiraToNetModel model = await _jiraToNetService.GetJiraToNetModelAsync(id);
+            var item = await _service.CreateAsync(model);
 
-            if(model == null)
+            return Ok(item);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<JiraToNetModel>> ReadAsync(int id)
+        {
+            var item = await _service.ReadAsync(id);
+
+            if (item == null)
             {
                 return NotFound();
             }
 
-            return model;
-        }
-
-        [HttpPost]
-        public async Task<ActionResult<JiraToNetModel>> CreateJiraToNetModelAsync(JiraToNetDTO dto)
-        {
-            JiraToNetModel model = await _jiraToNetService.CreateJiraToNetModelAsync(dto);
-
-            return CreatedAtAction(nameof(GetJiraToNetModelAsync), new { id = model.Id }, model);
+            return Ok(item);
         }
 
         [HttpPut]
-        public async Task<ActionResult<JiraToNetModel>> UpdateJiraToNetModelAsync(JiraToNetDTO dto)
+        public async Task<ActionResult<JiraToNetModel>> UpdateAsync([FromBody]JiraToNetModel model)
         {
-            JiraToNetModel model = await _jiraToNetService.UpdateJiraToNetModelAsync(dto);
+            var item = await _service.UpdateAsync(model);
 
-            return model;
+            return Ok(item);
         }
 
-        [HttpDelete]
-        public async Task<ActionResult> DeleteJiraToNetModelAsync(int id)
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<JiraToNetModel>> DeleteAsync(int id)
         {
-            await _jiraToNetService.DeleteJiraToNetModelAsync(id);
+            var result = await _service.DeleteAsync(id);
+
+            if (!result)
+            {
+                return NotFound();
+            }
 
             return NoContent();
         }

@@ -2,43 +2,67 @@
 {
     using Dotnetcom.DataAccess;
     using Dotnetcom.DTO;
+    using System.Threading.Tasks;
 
     public class JiraToNetService : IJiraToNetService
     {
-        private IJiraToNetRepository _jiraToNetRepository;
+        private readonly DotnetcomContext _context;
 
-        public JiraToNetService(IJiraToNetRepository jiraToNetRepository)
+        public JiraToNetService(DotnetcomContext context)
         {
-            _jiraToNetRepository = jiraToNetRepository;
+            _context = context;
         }
 
-        public async Task<JiraToNetModel> GetJiraToNetModelAsync(int id)
+        // Create
+        public async Task<JiraToNetModel> CreateAsync(JiraToNetModel model)
         {
-            return await _jiraToNetRepository.GetJiraToNetModelAsync(id);
-        }
-
-        public async Task<JiraToNetModel> CreateJiraToNetModelAsync(JiraToNetDTO dto)
-        {
-            JiraToNetModel model = new JiraToNetModel
+            var entity = new JiraToNetModel
             {
-                // Map the DTO to the Model
+                ProjectName = model.ProjectName,
+                TicketNumber = model.TicketNumber,
+                Description = model.Description,
+                Priority = model.Priority,
+                Status = model.Status
             };
 
-            return await _jiraToNetRepository.CreateJiraToNetModelAsync(model);
+            await _context.JiraToNet.AddAsync(entity);
+            await _context.SaveChangesAsync();
+
+            return entity;
         }
 
-        public async Task<JiraToNetModel> UpdateJiraToNetModelAsync(JiraToNetDTO dto)
+        // Read
+        public async Task<JiraToNetModel> ReadAsync(int id)
         {
-            JiraToNetModel model = await _jiraToNetRepository.GetJiraToNetModelAsync(dto.Id);
-
-            // Map the DTO to the Model
-
-            return await _jiraToNetRepository.UpdateJiraToNetModelAsync(model);
+            return await _context.JiraToNet.FindAsync(id);
         }
 
-        public async Task DeleteJiraToNetModelAsync(int id)
+        // Update
+        public async Task<JiraToNetModel> UpdateAsync(JiraToNetModel model)
         {
-            await _jiraToNetRepository.DeleteJiraToNetModelAsync(id);
+            var entity = await _context.JiraToNet.FindAsync(model.Id);
+
+            entity.ProjectName = model.ProjectName;
+            entity.TicketNumber = model.TicketNumber;
+            entity.Description = model.Description;
+            entity.Priority = model.Priority;
+            entity.Status = model.Status;
+
+            _context.JiraToNet.Update(entity);
+            await _context.SaveChangesAsync();
+
+            return entity;
+        }
+
+        // Delete
+        public async Task<bool> DeleteAsync(int id)
+        {
+            var entity = await _context.JiraToNet.FindAsync(id);
+
+            _context.JiraToNet.Remove(entity);
+            await _context.SaveChangesAsync();
+
+            return true;
         }
     }
 }
