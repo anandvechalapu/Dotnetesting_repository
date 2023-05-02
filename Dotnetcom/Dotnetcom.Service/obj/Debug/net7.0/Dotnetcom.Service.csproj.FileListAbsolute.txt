@@ -1,0 +1,17 @@
+C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\bin\Debug\net7.0\Dotnetcom.Service.deps.json
+C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\bin\Debug\net7.0\Dotnetcom.Service.dll
+C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\bin\Debug\net7.0\Dotnetcom.Service.pdb
+C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\bin\Debug\net7.0\Dotnetcom.DataAccess.dll
+C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\bin\Debug\net7.0\Dotnetcom.DTO.dll
+C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\bin\Debug\net7.0\Dotnetcom.DTO.pdb
+C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\bin\Debug\net7.0\Dotnetcom.DataAccess.pdb
+C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\obj\Debug\net7.0\Dotnetcom.Service.csproj.AssemblyReference.cache
+C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\obj\Debug\net7.0\Dotnetcom.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\obj\Debug\net7.0\Dotnetcom.Service.AssemblyInfoInputs.cache
+C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\obj\Debug\net7.0\Dotnetcom.Service.AssemblyInfo.cs
+C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\obj\Debug\net7.0\Dotnetcom.Service.csproj.CoreCompileInputs.cache
+C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\obj\Debug\net7.0\Dotnetcom.Service.csproj.CopyComplete
+C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\obj\Debug\net7.0\Dotnetcom.Service.dll
+C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\obj\Debug\net7.0\refint\Dotnetcom.Service.dll
+C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\obj\Debug\net7.0\Dotnetcom.Service.pdb
+C:\Amar\Debug\Apps\1\335\202305023610\Dotnetcom\Dotnetcom.Service\obj\Debug\net7.0\ref\Dotnetcom.Service.dll
