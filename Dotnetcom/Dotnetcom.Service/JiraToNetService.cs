@@ -1,68 +1,37 @@
 ﻿namespace Dotnetcom.Service
 {
-    using Dotnetcom.DataAccess;
-    using Dotnetcom.DTO;
-    using System.Threading.Tasks;
-
-    public class JiraToNetService : IJiraToNetService
+    public class JiraToNetService : IJiraToNetRepository
     {
-        private readonly DotnetcomContext _context;
+        private IJiraToNetRepository _repository { get; set; }
 
-        public JiraToNetService(DotnetcomContext context)
+        public JiraToNetService(IJiraToNetRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
-        // Create
-        public async Task<JiraToNetModel> CreateAsync(JiraToNetModel model)
+        public async Task<List<JiraToNetModel>> GetAllAsync()
         {
-            var entity = new JiraToNetModel
-            {
-                ProjectName = model.ProjectName,
-                TicketNumber = model.TicketNumber,
-                Description = model.Description,
-                Priority = model.Priority,
-                Status = model.Status
-            };
-
-            await _context.JiraToNet.AddAsync(entity);
-            await _context.SaveChangesAsync();
-
-            return entity;
+            return await _repository.GetAllAsync();
         }
 
-        // Read
-        public async Task<JiraToNetModel> ReadAsync(int id)
+        public async Task<JiraToNetModel> GetByIdAsync(int id)
         {
-            return await _context.JiraToNet.FindAsync(id);
+            return await _repository.GetByIdAsync(id);
         }
 
-        // Update
-        public async Task<JiraToNetModel> UpdateAsync(JiraToNetModel model)
+        public async Task CreateAsync(JiraToNetModel model)
         {
-            var entity = await _context.JiraToNet.FindAsync(model.Id);
-
-            entity.ProjectName = model.ProjectName;
-            entity.TicketNumber = model.TicketNumber;
-            entity.Description = model.Description;
-            entity.Priority = model.Priority;
-            entity.Status = model.Status;
-
-            _context.JiraToNet.Update(entity);
-            await _context.SaveChangesAsync();
-
-            return entity;
+            await _repository.CreateAsync(model);
         }
 
-        // Delete
-        public async Task<bool> DeleteAsync(int id)
+        public async Task UpdateAsync(JiraToNetModel model)
         {
-            var entity = await _context.JiraToNet.FindAsync(id);
+            await _repository.UpdateAsync(model);
+        }
 
-            _context.JiraToNet.Remove(entity);
-            await _context.SaveChangesAsync();
-
-            return true;
+        public async Task DeleteAsync(int id)
+        {
+            await _repository.DeleteAsync(id);
         }
     }
 }

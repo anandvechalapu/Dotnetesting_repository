@@ -1,64 +1,41 @@
-﻿namespace Dotnetcom.Repository
+﻿namespace Dotnetcom
 {
-    public class JiraToNetRepository : IJiraToNetRepository
+    public class JiraToNetRepository : IJiraToNetRepository 
     {
-        private readonly DotnetcomContext _context;
+        private DotnetcomDTO _context;
 
-        public JiraToNetRepository(DotnetcomContext context)
+        public JiraToNetRepository()
         {
-            _context = context;
+            _context = new DotnetcomDTO();
         }
 
-        // Create
-        public async Task<JiraToNetModel> CreateAsync(JiraToNetModel model)
+        public async Task<List<JiraToNetModel>> GetAllAsync()
         {
-            var entity = new JiraToNetModel
-            {
-                ProjectName = model.ProjectName,
-                TicketNumber = model.TicketNumber,
-                Description = model.Description,
-                Priority = model.Priority,
-                Status = model.Status
-            };
+            return await _context.JiraToNet.ToListAsync();
+        }
 
-            await _context.JiraToNet.AddAsync(entity);
+        public async Task<JiraToNetModel> GetByIdAsync(int id)
+        {
+            return await _context.JiraToNet.FirstOrDefaultAsync(x => x.Id == id);
+        }
+
+        public async Task CreateAsync(JiraToNetModel model)
+        {
+            _context.JiraToNet.Add(model);
             await _context.SaveChangesAsync();
-
-            return entity;
         }
 
-        // Read
-        public async Task<JiraToNetModel> ReadAsync(int id)
+        public async Task UpdateAsync(JiraToNetModel model)
         {
-            return await _context.JiraToNet.FindAsync(id);
-        }
-
-        // Update
-        public async Task<JiraToNetModel> UpdateAsync(JiraToNetModel model)
-        {
-            var entity = await _context.JiraToNet.FindAsync(model.Id);
-
-            entity.ProjectName = model.ProjectName;
-            entity.TicketNumber = model.TicketNumber;
-            entity.Description = model.Description;
-            entity.Priority = model.Priority;
-            entity.Status = model.Status;
-
-            _context.JiraToNet.Update(entity);
+            _context.JiraToNet.Update(model);
             await _context.SaveChangesAsync();
-
-            return entity;
         }
 
-        // Delete
-        public async Task<bool> DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-            var entity = await _context.JiraToNet.FindAsync(id);
-
-            _context.JiraToNet.Remove(entity);
+            var model = await _context.JiraToNet.FirstOrDefaultAsync(x => x.Id == id);
+            _context.JiraToNet.Remove(model);
             await _context.SaveChangesAsync();
-
-            return true;
         }
     }
 }
