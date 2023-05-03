@@ -491,11 +491,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Amar\\Debug\\Apps\\1\\336\\202305025021\\Dotnetcom\\Dotnetcom.DataAccess\\Dotnetcom.DataAccess.csproj",
+      "projectUniqueName": "C:\\Amar\\Debug\\Apps\\1\\409\\202305032410\\Dotnetcom\\Dotnetcom.DataAccess\\Dotnetcom.DataAccess.csproj",
       "projectName": "Dotnetcom.DataAccess",
-      "projectPath": "C:\\Amar\\Debug\\Apps\\1\\336\\202305025021\\Dotnetcom\\Dotnetcom.DataAccess\\Dotnetcom.DataAccess.csproj",
+      "projectPath": "C:\\Amar\\Debug\\Apps\\1\\409\\202305032410\\Dotnetcom\\Dotnetcom.DataAccess\\Dotnetcom.DataAccess.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Amar\\Debug\\Apps\\1\\336\\202305025021\\Dotnetcom\\Dotnetcom.DataAccess\\obj\\",
+      "outputPath": "C:\\Amar\\Debug\\Apps\\1\\409\\202305032410\\Dotnetcom\\Dotnetcom.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -510,8 +510,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Amar\\Debug\\Apps\\1\\336\\202305025021\\Dotnetcom\\Dotnetcom.DTO\\Dotnetcom.DTO.csproj": {
-              "projectPath": "C:\\Amar\\Debug\\Apps\\1\\336\\202305025021\\Dotnetcom\\Dotnetcom.DTO\\Dotnetcom.DTO.csproj"
+            "C:\\Amar\\Debug\\Apps\\1\\409\\202305032410\\Dotnetcom\\Dotnetcom.DTO\\Dotnetcom.DTO.csproj": {
+              "projectPath": "C:\\Amar\\Debug\\Apps\\1\\409\\202305032410\\Dotnetcom\\Dotnetcom.DTO\\Dotnetcom.DTO.csproj"
             }
           }
         }

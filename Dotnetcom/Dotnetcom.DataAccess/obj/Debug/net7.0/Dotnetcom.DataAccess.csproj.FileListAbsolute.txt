@@ -29,3 +29,11 @@ C:\Amar\Debug\Apps\1\336\202305025021\Dotnetcom\Dotnetcom.DataAccess\obj\Debug\n
 C:\Amar\Debug\Apps\1\336\202305025021\Dotnetcom\Dotnetcom.DataAccess\obj\Debug\net7.0\Dotnetcom.DataAccess.dll
 C:\Amar\Debug\Apps\1\336\202305025021\Dotnetcom\Dotnetcom.DataAccess\obj\Debug\net7.0\refint\Dotnetcom.DataAccess.dll
 C:\Amar\Debug\Apps\1\336\202305025021\Dotnetcom\Dotnetcom.DataAccess\obj\Debug\net7.0\Dotnetcom.DataAccess.pdb
+C:\Amar\Debug\Apps\1\409\202305032410\Dotnetcom\Dotnetcom.DataAccess\obj\Debug\net7.0\Dotnetcom.DataAccess.csproj.AssemblyReference.cache
+C:\Amar\Debug\Apps\1\409\202305032410\Dotnetcom\Dotnetcom.DataAccess\obj\Debug\net7.0\Dotnetcom.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Amar\Debug\Apps\1\409\202305032410\Dotnetcom\Dotnetcom.DataAccess\obj\Debug\net7.0\Dotnetcom.DataAccess.AssemblyInfoInputs.cache
+C:\Amar\Debug\Apps\1\409\202305032410\Dotnetcom\Dotnetcom.DataAccess\obj\Debug\net7.0\Dotnetcom.DataAccess.AssemblyInfo.cs
+C:\Amar\Debug\Apps\1\409\202305032410\Dotnetcom\Dotnetcom.DataAccess\obj\Debug\net7.0\Dotnetcom.DataAccess.csproj.CoreCompileInputs.cache
+C:\Amar\Debug\Apps\1\409\202305032410\Dotnetcom\Dotnetcom.DataAccess\obj\Debug\net7.0\Dotnetcom.DataAccess.dll
+C:\Amar\Debug\Apps\1\409\202305032410\Dotnetcom\Dotnetcom.DataAccess\obj\Debug\net7.0\refint\Dotnetcom.DataAccess.dll
+C:\Amar\Debug\Apps\1\409\202305032410\Dotnetcom\Dotnetcom.DataAccess\obj\Debug\net7.0\Dotnetcom.DataAccess.pdb
