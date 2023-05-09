@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<ApexTrigger xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>48.0</apiVersion>
+	<isActive>true</isActive>
+	<status>Active</status>
+	<description>Trigger for Student__c custom object to automatically populate phone number into Mobile field</description>
+	<triggerName>Student__c_PhoneNumber_Trigger</triggerName>
+	<triggerSource>trigger Student__c_PhoneNumber_Trigger on Student__c (before insert, before update) {
+	
+	//Declare a variable to hold the Phone field value
+	String PhoneNumber;
+	
+	//Check if the trigger is fired on before insert
+	if(Trigger.isBefore && Trigger.isInsert)
+	{	
+		//Loop through the records in the trigger
+		for(Student__c stu : Trigger.new) 
+		{
+			//Get the phone number of the student
+			PhoneNumber = stu.Phone;
+			
+			//Check if the Mobile field is empty or null
+			if(stu.Mobile == null || stu.Mobile == '')
+			{
+				//Update the Mobile field with the phone number of the student
+				stu.Mobile = PhoneNumber;
+			}
+		}
+	}
+	
+	//Check if the trigger is fired on before update
+	if(Trigger.isBefore && Trigger.isUpdate)
+	{
+		//Loop through the records in the trigger
+		for(Student__c stu : Trigger.new) 
+		{
+			//Get the phone number of the student
+			PhoneNumber = stu.Phone;
+			
+			//Check if the Mobile field is empty or null
+			if(stu.Mobile == null || stu.Mobile == '')
+			{
+				//Update the Mobile field with the phone number of the student
+				stu.Mobile = PhoneNumber;
+			}
+		}
+	}
+}
+</triggerSource>
+</ApexTrigger>
